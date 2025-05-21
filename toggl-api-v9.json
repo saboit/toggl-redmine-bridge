@@ -356,6 +356,7 @@
         ],
         "description": "Add new Backoffice user.",
         "produces": ["application/json"],
+        "consumes": ["application/json"],
         "tags": ["backoffice_users"],
         "summary": "Add new Backoffice user.",
         "operationId": "add-backoffice-user",
@@ -432,6 +433,7 @@
           }
         ],
         "description": "Update an existing Backoffice user data.",
+        "consumes": ["application/json"],
         "produces": ["application/json"],
         "tags": ["backoffice_users"],
         "summary": "Update an existing Backoffice user data.",
@@ -518,6 +520,7 @@
           }
         ],
         "description": "Creates a new beta feature",
+        "consumes": ["application/json"],
         "produces": ["application/json"],
         "tags": ["beta_features"],
         "summary": "Creates a new beta feature",
@@ -558,6 +561,7 @@
         ],
         "description": "Creates rollout job",
         "produces": ["application/json"],
+        "consumes": ["application/json"],
         "tags": ["beta_features"],
         "summary": "Creates rollout job",
         "operationId": "create-rollout-job",
@@ -651,6 +655,7 @@
         ],
         "description": "Rolls back rollout job",
         "produces": ["application/json"],
+        "consumes": ["application/json"],
         "tags": ["beta_features"],
         "summary": "Rolls back rollout job",
         "operationId": "rollback-beta-feature-rollout",
@@ -1020,6 +1025,7 @@
         ],
         "description": "Returns the projects' data trends projects from a workspace.",
         "produces": ["application/json"],
+        "consumes": ["application/json"],
         "tags": ["insights"],
         "summary": "Load projects' data trends",
         "parameters": [
@@ -1085,6 +1091,7 @@
           }
         ],
         "description": "Downloads employee profitability insights in the specified format: csv or xlsx.",
+        "consumes": ["application/json"],
         "produces": ["text/csv", "text/xlsx"],
         "tags": ["insights", "exports"],
         "summary": "Export employee profitability insights",
@@ -1135,6 +1142,7 @@
           }
         ],
         "description": "Downloads profitability project insights in the specified format: csv or xlsx.",
+        "consumes": ["application/json"],
         "produces": ["text/csv", "text/xlsx"],
         "tags": ["insights", "exports"],
         "summary": "Export profitability project insights",
@@ -1458,6 +1466,7 @@
           }
         ],
         "description": "Given one or more event IDs, this endpoint responds with the most probable event details\n(and its accuracy) to assign to the to-be-created time entry for each event ID.\nThis endpoint will only suggests time entries with description and project not empty, because it uses\nthe description to tell if the TE is similar and the project as the main detail to be suggested.\n\nIf the description is equal, as well as all the other details, the accuracy will be 100%, in the case\nthe description is equal but the other details differs, the most frequent will be suggested and the\naccuracy will be given based on the frequency. In the case there is no TE with the same description\nthe most similar will be suggested based on the Jaro-Winkler algorithm, and the accuracy will be the\nsimilarity rating.\n\nThis endpoint returns status 200 OK with only the successful suggestions. Any event ID that is invalid\nor the user does not have access to will be ignored, as well as any event that has no available suggestion.",
+        "consumes": ["application/json"],
         "produces": ["application/json"],
         "tags": ["calendar"],
         "summary": "Get details suggestion for given events.",
@@ -15820,6 +15829,7 @@
         ],
         "description": "Create project for given workspace.",
         "produces": ["application/json"],
+        "consumes": ["application/json"],
         "tags": ["projects"],
         "summary": "WorkspaceProjects",
         "operationId": "post-workspace-project-create",

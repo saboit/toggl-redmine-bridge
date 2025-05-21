@@ -5891,7 +5891,10 @@ export type GetAllUsersResponses = {
 export type GetAllUsersResponse = GetAllUsersResponses[keyof GetAllUsersResponses];
 
 export type AddBackofficeUserData = {
-    body?: never;
+    /**
+     * Input data for the new user.
+     */
+    body: ModelsAdmin;
     path?: never;
     query?: never;
     url: '/backoffice/users';
@@ -5986,7 +5989,10 @@ export type GetBackofficeUserResponses = {
 export type GetBackofficeUserResponse = GetBackofficeUserResponses[keyof GetBackofficeUserResponses];
 
 export type UpdateBackofficeUserData = {
-    body?: never;
+    /**
+     * Updated user data.
+     */
+    body: ModelsAdmin;
     path: {
         /**
          * ID of the backoffice user to be updated.
@@ -6022,7 +6028,10 @@ export type UpdateBackofficeUserResponses = {
 export type UpdateBackofficeUserResponse = UpdateBackofficeUserResponses[keyof UpdateBackofficeUserResponses];
 
 export type AddBetaFeatureData = {
-    body?: never;
+    /**
+     * Feature description
+     */
+    body: BetafeaturesAlphaFeatureAddInputData;
     path?: never;
     query?: never;
     url: '/beta_features';
@@ -6045,7 +6054,10 @@ export type AddBetaFeatureResponses = {
 export type AddBetaFeatureResponse = AddBetaFeatureResponses[keyof AddBetaFeatureResponses];
 
 export type CreateRolloutJobData = {
-    body?: never;
+    /**
+     * Rollout data
+     */
+    body: BetafeaturesAlphaFeatureRolloutInputData;
     path: {
         /**
          * Beta feature id
@@ -6109,7 +6121,10 @@ export type DeleteRolloutJobResponses = {
 export type DeleteRolloutJobResponse = DeleteRolloutJobResponses[keyof DeleteRolloutJobResponses];
 
 export type RollbackBetaFeatureRolloutData = {
-    body?: never;
+    /**
+     * Rollback data
+     */
+    body: BetafeaturesBetaFeatureRolloutRollbackInputData;
     path: {
         /**
          * Beta feature id
@@ -6341,7 +6356,10 @@ export type GetIcalResponses = {
 };
 
 export type PostInsightsApiV1WorkspaceByWorkspaceIdDataTrendsProjectsData = {
-    body?: never;
+    /**
+     * Projects filter conditions
+     */
+    body: ProjectsProjectTrend;
     path: {
         /**
          * Workspace ID
@@ -6383,7 +6401,10 @@ export type PostInsightsApiV1WorkspaceByWorkspaceIdDataTrendsProjectsResponses =
 export type PostInsightsApiV1WorkspaceByWorkspaceIdDataTrendsProjectsResponse = PostInsightsApiV1WorkspaceByWorkspaceIdDataTrendsProjectsResponses[keyof PostInsightsApiV1WorkspaceByWorkspaceIdDataTrendsProjectsResponses];
 
 export type PostInsightsApiV1WorkspaceByWorkspaceIdProfitabilityEmployeesByExtensionData = {
-    body?: never;
+    /**
+     * Parameters for report
+     */
+    body: DtoEmployeeProfitability;
     path?: never;
     query?: never;
     url: '/insights/api/v1/workspace/{workspace_id}/profitability/employees.{extension}';
@@ -6416,7 +6437,10 @@ export type PostInsightsApiV1WorkspaceByWorkspaceIdProfitabilityEmployeesByExten
 export type PostInsightsApiV1WorkspaceByWorkspaceIdProfitabilityEmployeesByExtensionResponse = PostInsightsApiV1WorkspaceByWorkspaceIdProfitabilityEmployeesByExtensionResponses[keyof PostInsightsApiV1WorkspaceByWorkspaceIdProfitabilityEmployeesByExtensionResponses];
 
 export type PostInsightsApiV1WorkspaceByWorkspaceIdProfitabilityProjectsByExtensionData = {
-    body?: never;
+    /**
+     * Parameters for report
+     */
+    body: DtoProjectProfitability;
     path: {
         /**
          * csv,xlsx
@@ -6642,7 +6666,10 @@ export type GetIntegrationsCalendarEventsResponses = {
 export type GetIntegrationsCalendarEventsResponse = GetIntegrationsCalendarEventsResponses[keyof GetIntegrationsCalendarEventsResponses];
 
 export type PostIntegrationsCalendarEventsDetailsSuggestionData = {
-    body?: never;
+    /**
+     * Request body containing the event IDs we want to get the suggestion for
+     */
+    body: HandlercalendarPostDetailsSuggestionRequest;
     path?: never;
     query?: never;
     url: '/integrations/calendar/events/details-suggestion';
@@ -16636,7 +16663,10 @@ export type GetProjectsResponses = {
 export type GetProjectsResponse = GetProjectsResponses[keyof GetProjectsResponses];
 
 export type PostWorkspaceProjectCreateData = {
-    body?: never;
+    /**
+     * Post parameters
+     */
+    body: ProjectPayload;
     path: {
         /**
          * Numeric ID of the workspace

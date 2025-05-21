@@ -22,7 +22,7 @@
     "./api-toggl/*": "./dist/api-toggl/*.js"
   },
   "scripts": {
-    "build": "tsc",
+    "build": "npx tsc",
     "generate-redmine": "npx @hey-api/openapi-ts -i https://raw.githubusercontent.com/d-yoshi/redmine-openapi/refs/heads/main/openapi.yml -o src/api-redmine -c @hey-api/client-fetch",
     "generate-toggl": "npx @hey-api/openapi-ts -i ./toggl-api-v9.json -o src/api-toggl -c @hey-api/client-fetch"
   },
