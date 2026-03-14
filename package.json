@@ -1,6 +1,6 @@
 {
   "name": "@saboit/toggl-redmine-bridge",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "",
   "homepage": "https://github.com/saboit/toggl-redmine-bridge#readme",
   "bugs": {
@@ -19,16 +19,27 @@
     "./api-redmine": "./dist/api-redmine/index.js",
     "./api-redmine/*": "./dist/api-redmine/*.js",
     "./api-toggl": "./dist/api-toggl/index.js",
-    "./api-toggl/*": "./dist/api-toggl/*.js"
+    "./api-toggl/*": "./dist/api-toggl/*.js",
+    "./api-redmine-hooks": "./dist/api-redmine-hooks/index.js",
+    "./api-redmine-hooks/*": "./dist/api-redmine-hooks/*.js",
+    "./api-toggl-hooks": "./dist/api-toggl-hooks/index.js",
+    "./api-toggl-hooks/*": "./dist/api-toggl-hooks/*.js"
   },
   "scripts": {
     "build": "tsc",
-    "generate-redmine": "npx @hey-api/openapi-ts -i https://raw.githubusercontent.com/d-yoshi/redmine-openapi/refs/heads/main/openapi.yml -o src/api-redmine -c @hey-api/client-fetch",
-    "generate-toggl": "npx @hey-api/openapi-ts -i ./toggl-api-v9.json -o src/api-toggl -c @hey-api/client-fetch"
+    "generate-redmine": "npx @hey-api/openapi-ts -i ./redmine-api.json -o src/api-redmine -c @hey-api/client-fetch",
+    "generate-toggl": "npx @hey-api/openapi-ts -i ./toggl-api-v9.json -o src/api-toggl -c @hey-api/client-fetch",
+    "generate-hooks": "node scripts/patch-toggl-spec.mjs && orval && node scripts/generate-index.mjs",
+    "generate-redmine-hooks": "orval --project redmine && node scripts/generate-index.mjs",
+    "generate-toggl-hooks": "node scripts/patch-toggl-spec.mjs && orval --project toggl && node scripts/generate-index.mjs"
   },
   "devDependencies": {
     "@hey-api/openapi-ts": "^0.66.3",
+    "orval": "^7.9.0",
     "typescript": "^5.8.3"
+  },
+  "peerDependencies": {
+    "@tanstack/react-query": "^5.0.0"
   },
   "publishConfig": {
     "registry": "https://npm.pkg.github.com/"

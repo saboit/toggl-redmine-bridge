@@ -1,5 +1,7 @@
 import { client as togglClient } from "./api-toggl/client.gen.js";
 import { client as redmineClient } from "./api-redmine/client.gen.js";
+import { configureRedmine } from "./mutators/redmine.js";
+import { configureToggl } from "./mutators/toggl.js";
 
 type RedmineAuth = {
   baseUrl: string;
@@ -17,6 +19,7 @@ type Credentials = {
 };
 
 export const initConfig = ({ redmine, toggl }: Credentials) => {
+  // Configure @hey-api/client-fetch SDK clients
   togglClient.setConfig({
     baseUrl: toggl.baseUrl,
     headers: {
@@ -30,4 +33,8 @@ export const initConfig = ({ redmine, toggl }: Credentials) => {
       Authorization: redmine.token,
     },
   });
+
+  // Configure react-query hook fetch instances
+  configureRedmine({ baseURL: redmine.baseUrl, authorization: redmine.token });
+  configureToggl({ baseURL: toggl.baseUrl, authorization: toggl.token });
 };
