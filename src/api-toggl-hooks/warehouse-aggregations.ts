@@ -21,9 +21,9 @@ import type {
 
 import type {
   WebAggregationsGenerationRequest
-} from './togglAPI.schemas';
+} from './togglAPI.schemas.js';
 
-import { togglAxios } from '../mutators/toggl';
+import { togglAxios } from '../mutators/toggl.js';
 
 
 

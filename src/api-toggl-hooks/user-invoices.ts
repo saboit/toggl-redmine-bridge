@@ -31,9 +31,9 @@ import type {
 import type {
   GetWorkspaceInvoicesBody,
   ModelsUserInvoice
-} from './togglAPI.schemas';
+} from './togglAPI.schemas.js';
 
-import { togglAxios } from '../mutators/toggl';
+import { togglAxios } from '../mutators/toggl.js';
 
 
 

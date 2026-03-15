@@ -22,9 +22,9 @@ import type {
 import type {
   ModelsTimeEntryConstraints,
   WorkspacesJSONResult
-} from './togglAPI.schemas';
+} from './togglAPI.schemas.js';
 
-import { togglAxios } from '../mutators/toggl';
+import { togglAxios } from '../mutators/toggl.js';
 
 
 

@@ -30,9 +30,9 @@ import type {
 
 import type {
   GetFeatureUpsellMulti200
-} from './togglAPI.schemas';
+} from './togglAPI.schemas.js';
 
-import { togglAxios } from '../mutators/toggl';
+import { togglAxios } from '../mutators/toggl.js';
 
 
 

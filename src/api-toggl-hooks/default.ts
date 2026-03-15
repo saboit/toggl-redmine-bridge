@@ -42,9 +42,9 @@ import type {
   ProjectsDataTrendsReport,
   ProjectsReport,
   UsersDataTrendsReport
-} from './togglAPI.schemas';
+} from './togglAPI.schemas.js';
 
-import { togglAxios } from '../mutators/toggl';
+import { togglAxios } from '../mutators/toggl.js';
 
 
 

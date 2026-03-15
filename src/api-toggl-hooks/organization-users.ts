@@ -25,9 +25,9 @@ import type {
   PostUsersProductIdOrganizationIdRoles500,
   TypesUserRole,
   UsersGetOrganizationUsersForRolesBody
-} from './togglAPI.schemas';
+} from './togglAPI.schemas.js';
 
-import { togglAxios } from '../mutators/toggl';
+import { togglAxios } from '../mutators/toggl.js';
 
 
 

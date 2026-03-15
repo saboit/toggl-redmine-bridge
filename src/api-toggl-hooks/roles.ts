@@ -36,9 +36,9 @@ import type {
   PostRolesProductIdFind500,
   RolesFindRoleParams,
   RolesRole
-} from './togglAPI.schemas';
+} from './togglAPI.schemas.js';
 
-import { togglAxios } from '../mutators/toggl';
+import { togglAxios } from '../mutators/toggl.js';
 
 
 

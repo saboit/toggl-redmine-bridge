@@ -34,9 +34,9 @@ import type {
   PostSaml2CallbackBody,
   Saml2LoginResponse,
   SsoConfirmation
-} from './togglAPI.schemas';
+} from './togglAPI.schemas.js';
 
-import { togglAxios } from '../mutators/toggl';
+import { togglAxios } from '../mutators/toggl.js';
 
 
 

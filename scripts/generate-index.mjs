@@ -10,6 +10,22 @@ const TS_NOCHECK = "// @ts-nocheck\n";
 
 const SKIP_FILES = new Set(["mutator.ts", "index.ts"]);
 
+function fixRelativeImportExtensions(dir) {
+  if (!existsSync(dir)) return;
+  for (const f of readdirSync(dir, { recursive: true })) {
+    if (!f.endsWith(".ts")) continue;
+    if (SKIP_FILES.has(basename(f))) continue;
+    const file = join(dir, f);
+    const content = readFileSync(file, "utf-8");
+    // Rewrite extension-less relative imports to .js (required for Node.js ESM)
+    const fixed = content.replace(
+      /from '(\.[^']*?)(?<!\.js)'/g,
+      "from '$1.js'"
+    );
+    if (fixed !== content) writeFileSync(file, fixed, "utf-8");
+  }
+}
+
 function addTsNocheck(dir) {
   if (!existsSync(dir)) return;
   for (const f of readdirSync(dir, { recursive: true })) {
@@ -43,5 +59,7 @@ function generateBarrel(dir) {
 
 addTsNocheck("./src/api-redmine-hooks");
 addTsNocheck("./src/api-toggl-hooks");
+fixRelativeImportExtensions("./src/api-redmine-hooks");
+fixRelativeImportExtensions("./src/api-toggl-hooks");
 generateBarrel("./src/api-redmine-hooks");
 generateBarrel("./src/api-toggl-hooks");

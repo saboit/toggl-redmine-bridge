@@ -27,9 +27,9 @@ import type {
 import type {
   ModelsCountry,
   ModelsSubdivision
-} from './togglAPI.schemas';
+} from './togglAPI.schemas.js';
 
-import { togglAxios } from '../mutators/toggl';
+import { togglAxios } from '../mutators/toggl.js';
 
 
 

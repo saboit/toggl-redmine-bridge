@@ -31,9 +31,9 @@ import type {
 import type {
   ModelsScheduledReport,
   ScheduledPayload
-} from './togglAPI.schemas';
+} from './togglAPI.schemas.js';
 
-import { togglAxios } from '../mutators/toggl';
+import { togglAxios } from '../mutators/toggl.js';
 
 
 

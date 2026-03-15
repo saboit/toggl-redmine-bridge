@@ -24,9 +24,9 @@ import type {
   PostSessionProductIdOrganizationsOrganizationIdWorkspacesWorkspaceIdUsers400,
   PostSessionProductIdOrganizationsOrganizationIdWorkspacesWorkspaceIdUsers500,
   SessionCheckWorkspaceUsersPayload
-} from './togglAPI.schemas';
+} from './togglAPI.schemas.js';
 
-import { togglAxios } from '../mutators/toggl';
+import { togglAxios } from '../mutators/toggl.js';
 
 
 

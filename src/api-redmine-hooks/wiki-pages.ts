@@ -34,9 +34,9 @@ import type {
   GetWikiPages200,
   UpdateWikiPage201,
   UpdateWikiPageBody
-} from './redmineAPI.schemas';
+} from './redmineAPI.schemas.js';
 
-import { redmineAxios } from '../mutators/redmine';
+import { redmineAxios } from '../mutators/redmine.js';
 
 
 

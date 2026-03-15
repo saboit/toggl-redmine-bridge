@@ -23,9 +23,9 @@ import type {
 
 import type {
   GetIssueStatuses200
-} from './redmineAPI.schemas';
+} from './redmineAPI.schemas.js';
 
-import { redmineAxios } from '../mutators/redmine';
+import { redmineAxios } from '../mutators/redmine.js';
 
 
 

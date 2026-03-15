@@ -24,9 +24,9 @@ import type {
 import type {
   GetRole200,
   GetRoles200
-} from './redmineAPI.schemas';
+} from './redmineAPI.schemas.js';
 
-import { redmineAxios } from '../mutators/redmine';
+import { redmineAxios } from '../mutators/redmine.js';
 
 
 

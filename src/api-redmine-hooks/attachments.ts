@@ -32,9 +32,9 @@ import type {
   UpdateAttachmentBody,
   UploadAttachmentFile201,
   UploadAttachmentFileParams
-} from './redmineAPI.schemas';
+} from './redmineAPI.schemas.js';
 
-import { redmineAxios } from '../mutators/redmine';
+import { redmineAxios } from '../mutators/redmine.js';
 
 
 

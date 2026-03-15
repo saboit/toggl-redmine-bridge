@@ -51,9 +51,9 @@ import type {
   UserPostPayload,
   UserPutPayload,
   WorkspaceProjectsTaskCount200Item
-} from './togglAPI.schemas';
+} from './togglAPI.schemas.js';
 
-import { togglAxios } from '../mutators/toggl';
+import { togglAxios } from '../mutators/toggl.js';
 
 
 

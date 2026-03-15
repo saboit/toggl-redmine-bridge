@@ -23,9 +23,9 @@ import type {
   PostUserRolesProductId400,
   PostUserRolesProductId500,
   UserrolesUserRoleChange
-} from './togglAPI.schemas';
+} from './togglAPI.schemas.js';
 
-import { togglAxios } from '../mutators/toggl';
+import { togglAxios } from '../mutators/toggl.js';
 
 
 

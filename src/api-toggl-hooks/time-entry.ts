@@ -27,9 +27,9 @@ import type {
 import type {
   GetUsersTimeEntriesBody,
   ModelsTimeEntrySearchResult
-} from './togglAPI.schemas';
+} from './togglAPI.schemas.js';
 
-import { togglAxios } from '../mutators/toggl';
+import { togglAxios } from '../mutators/toggl.js';
 
 
 

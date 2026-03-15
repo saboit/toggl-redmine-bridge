@@ -35,9 +35,9 @@ import type {
   GetUserServiceNotifications200,
   GetUserServiceNotificationsParams,
   PostWebappNotificationsBody
-} from './togglAPI.schemas';
+} from './togglAPI.schemas.js';
 
-import { togglAxios } from '../mutators/toggl';
+import { togglAxios } from '../mutators/toggl.js';
 
 
 

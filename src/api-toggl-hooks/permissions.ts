@@ -28,9 +28,9 @@ import type {
   GetPermissionsProductId400,
   GetPermissionsProductId500,
   RolesPermission
-} from './togglAPI.schemas';
+} from './togglAPI.schemas.js';
 
-import { togglAxios } from '../mutators/toggl';
+import { togglAxios } from '../mutators/toggl.js';
 
 
 

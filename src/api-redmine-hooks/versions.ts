@@ -33,9 +33,9 @@ import type {
   GetVersionsByProject200,
   GetVersionsByProjectParams,
   UpdateVersionBody
-} from './redmineAPI.schemas';
+} from './redmineAPI.schemas.js';
 
-import { redmineAxios } from '../mutators/redmine';
+import { redmineAxios } from '../mutators/redmine.js';
 
 
 

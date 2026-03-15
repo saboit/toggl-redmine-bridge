@@ -37,9 +37,9 @@ import type {
   ModelsTogglUserSimple,
   ModelsWorkspaceUser,
   UserPayload
-} from './togglAPI.schemas';
+} from './togglAPI.schemas.js';
 
-import { togglAxios } from '../mutators/toggl';
+import { togglAxios } from '../mutators/toggl.js';
 
 
 

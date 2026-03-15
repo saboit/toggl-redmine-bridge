@@ -24,9 +24,9 @@ import type {
   DetailedPost,
   DetailedSearchExportPost,
   TotalsReportPost
-} from './togglAPI.schemas';
+} from './togglAPI.schemas.js';
 
-import { togglAxios } from '../mutators/toggl';
+import { togglAxios } from '../mutators/toggl.js';
 
 
 
